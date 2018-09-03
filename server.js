@@ -78,6 +78,7 @@ function led_toggle() {
 io.on('connection', function(socket) {
   sid = socket.id;
   console.log(sid, 'a user connected');
+  io.emit('led:level', state);
 
   socket.on('disconnect', function() {
 
