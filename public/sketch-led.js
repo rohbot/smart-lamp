@@ -68,7 +68,7 @@ function ledOff() {
 
 function ledDim() {
   //fullscreen(true);
-  sendLed(30);
+  sendLed(50);
 }
 
 
