@@ -1,7 +1,7 @@
 {
-  "name": "singing-things",
+  "name": "smart-lamp",
   "version": "0.0.1",
-  "description": "my first socket.io app",
+  "description": "iot smart lamp",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",

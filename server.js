@@ -11,7 +11,7 @@ var cron = require('node-cron');
 var state = 0;
 var lamp_step = 0;
 const SLOPE_SIZE = 32;
-const SLOPE = [0, 0, 1, 1, 2, 2, 3, 4, 5, 6, 7, 8, 10, 12, 15, 18, 22, 26, 31, 37, 44, 54, 63, 76, 90, 108, 127, 153, 180, 217, 230, 255];
+const SLOPE = [1, 1, 1, 1, 2, 2, 3, 4, 5, 6, 7, 8, 10, 12, 15, 18, 22, 26, 31, 37, 44, 54, 63, 76, 90, 108, 127, 153, 180, 217, 230, 255];
 
 const lampTopic = 'lamp/switch';
 
@@ -135,7 +135,7 @@ client.on('message', function(topic, message) {
 });
 
 
-cron.schedule('7 0 * * *', function() {
+cron.schedule('0 8 * * *', function() {
   lamp_step = 0;
   fadeInterval = setInterval(fadeOnLamp, 120000);
   console.log(new Date(), 'Starting Lamp fade', lamp_step);
